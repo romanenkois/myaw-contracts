@@ -2,7 +2,7 @@ export type MessageResponseDto = TextMessageResponseDto;
 
 export type MessageTypeResponseDto = 'text';
 
-export interface MessageResponseDtoBase<T extends MessageTypeResponseDto> {
+export interface MessageResponseBaseDto<T extends MessageTypeResponseDto> {
   id: string;
   chatId: string;
   senderId: string;
@@ -11,7 +11,7 @@ export interface MessageResponseDtoBase<T extends MessageTypeResponseDto> {
   content: Record<string, unknown>;
 }
 
-export interface TextMessageResponseDto extends MessageResponseDtoBase<'text'> {
+export interface TextMessageResponseDto extends MessageResponseBaseDto<'text'> {
   content: {
     text: string;
   };
