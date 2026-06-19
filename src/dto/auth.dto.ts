@@ -1,11 +1,9 @@
-/** Sent by the client to authenticate. */
-export interface LoginRequestDto {
+export interface LoginCredentialsRequestDto {
   email: string;
   password: string;
 }
 
-/** Returned by the server after successful authentication. */
-export interface LoginResponseDto {
+export interface LoginCredentialsResponseDto {
   accessToken: string;
   refreshToken: string;
 }
